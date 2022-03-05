@@ -21,18 +21,6 @@ describe('Section 1', function () {
      const callbackBtn = await page.waitForSelector('button:has-text("Trigger Callback")');
      await callbackBtn.click();
 
-     //wait a bit for fun
-     await page.waitForTimeout(3000);
-
-     //click again
-     await callbackBtn.click();
-
-      //wait a bit for fun
-      await page.waitForTimeout(3000);
-
-      //click again
-      await callbackBtn.click();
-
      //keep app open for another 10 seconds
      await page.waitForTimeout(10000);
   });
