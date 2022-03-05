@@ -1,0 +1,31 @@
+{
+  "name": "@anvosoughi/sample-app-e2e",
+  "version": "1.0.0",
+  "author": "anvosoughi",
+  "description": "Sample E2E",
+  "scripts": {
+    "test:e2e": "cross-env jest --runInBand --detectOpenHandles --forceExit --config=./jest.config.ts"
+  },
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "jest",
+      "jest/**"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/shelljs": "^0.8.8",
+    "@types/ws": "^8.5.1",
+    "cross-env": "^7.0.3",
+    "jest": "^27.0.4",
+    "playwright": "1.19.2",
+    "shelljs": "^0.8.4",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "test_module",
+  "version": "0.0.0",
+  "description": "Test module",
+  "private": true,
+  "cmake-js": {
+    "runtime": "electron",
+    "runtimeVersion": "17.1.0",
+    "arch": "x64"
+  },
+  "devDependencies": {
+    "node-addon-api": "^4.3.0"
+  }
+}

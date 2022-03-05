@@ -1,0 +1,14 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "anvosoughi",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ./electron/main.js",
+    "build:node-addon": "npx cmake-js build -T install -d ./native"
+  },
+  "devDependencies": {
+    "electron": "17.1.0"
+  }
+}

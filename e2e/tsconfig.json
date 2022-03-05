@@ -1,0 +1,9 @@
+{
+  "extends": "../e2e/tsconfig.base.json",
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    "module": "ESNext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
+    "isolatedModules": false /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+  }
+}

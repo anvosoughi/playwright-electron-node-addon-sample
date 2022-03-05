@@ -1,0 +1,2 @@
+Install cmake-js globally: npm install -g cmake-js
+Build: cmake-js build -T install

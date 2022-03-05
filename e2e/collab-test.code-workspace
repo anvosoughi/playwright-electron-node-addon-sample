@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "." // root of desktop_app_test
+		},
+		{
+			"path": "./screenshots" // screenshot folder for test errors
+		},
+		{
+			"path": "./node_modules" // node modules
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			// Default entries 
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+
+			"screenshots": true,
+			"node_modules": true
+		}
+	}
+}
