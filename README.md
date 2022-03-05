@@ -6,7 +6,8 @@ Steps:
 
 2. Install playwright dependencies
 `cd e2e`
-`yarn install` or `npm install'
+
+`yarn install` or `npm install`
 
 3. run tests
 `yarn test:e2e` or `npm run test:e2e`
