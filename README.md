@@ -20,3 +20,9 @@ I have a simple Electron sample app, which uses the 'node-addon-api' to make a c
 When the app is launched, the triggerCallback function is automatically executed, which triggers C++ add-on to make one call to the app every second using a callback.
 
 There is a console output of "triggerCallback fired" when the function is executed. And "callback result: XX" is printed to console every second thereafter.
+
+**Note:** 
+
+You can also trigger the callback manually using the button with text "Trigger Callback"
+
+This app is for Windows OS only
