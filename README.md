@@ -12,7 +12,8 @@ Steps:
 3. run tests
 `npm run test:e2e`
 
-Desccription:
+**Desccription:**
+
 I have a simple Electron sample app, which uses the 'node-addon-api' to make a call from JavaScript(electron app) to C++ add-on, and receive a callback from C++ add-on to the JavaScript(electron app).
 
 When the app is launches, the triggerCallback function is automatically executed, which triggers C++ add-on to make one call to the app every second using a callback.
