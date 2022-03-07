@@ -7,12 +7,6 @@
     "test:e2e": "cross-env jest --runInBand --detectOpenHandles --forceExit --config=./jest.config.ts"
   },
   "private": true,
-  "workspaces": {
-    "nohoist": [
-      "jest",
-      "jest/**"
-    ]
-  },
   "dependencies": {
     "dotenv": "^16.0.0"
   },
