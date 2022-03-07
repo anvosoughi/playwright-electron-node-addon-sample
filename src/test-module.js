@@ -11,3 +11,6 @@ const triggerCallback = () => {
 	console.log("triggerCallback clicked: ");
   helloWorld.testModule.trigger_callback();
 };
+
+//trigger callback now!
+triggerCallback();
