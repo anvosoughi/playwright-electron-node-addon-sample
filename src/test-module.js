@@ -8,7 +8,7 @@ const query = () => {
 };
 
 const triggerCallback = () => {
-	console.log("triggerCallback clicked: ");
+	console.log("triggerCallback fired");
   helloWorld.testModule.trigger_callback();
 };
 
