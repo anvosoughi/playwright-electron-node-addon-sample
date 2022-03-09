@@ -5,7 +5,7 @@
   "author": "anvosoughi",
   "license": "MIT",
   "scripts": {
-    "start": "electron ./electron/main.js",
+    "start": "electron ./electron/main.js --inspect=0 --remote-debugging-port=0",
     "build:node-addon": "npx cmake-js build -T install -d ./native"
   },
   "devDependencies": {
