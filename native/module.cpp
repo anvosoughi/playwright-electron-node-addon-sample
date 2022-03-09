@@ -1,15 +1,20 @@
 #include <napi.h>
 
 #include <chrono>
-#include <iostream>
+#include <fstream>
 #include <map>
 #include <thread>
 
+std::ofstream logFile("native.log");
+
 void javascript_callback(Napi::Env env, Napi::Function callback, Napi::Reference<Napi::Value>* context, int* data)
 {
+  logFile << "javascript_callback env: " << env << " callback: " << callback << std::endl;
   if (nullptr != env && nullptr != callback)
   {
+    logFile << "javascript_callback start callback.Call(" << env << ", " << *data << ")"<< std::endl;
     callback.Call(context->Value(), { Napi::Number::New(env, *data) });
+    logFile << "javascript_callback end callback.Call" << std::endl;
   }
 }
 
@@ -24,13 +29,22 @@ void callbackThreadFunc()
   {
     if (sendCallback)
     {
+      logFile << "Sending callback" << std::endl;
       int* value = new int(gResult++);
       for(auto it = gCallbacks.begin(); it != gCallbacks.end(); ++it)
       {
+        logFile << "Start NonBlockingCall" << std::endl;
         it->second.NonBlockingCall(value);
+        logFile << "End NonBlockingCall" << std::endl;
       }
     }
+    else
+    {
+      logFile << "Not sending callback" << std::endl;
+    }
+    logFile << "Start sleep 1 second" << std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    logFile << "End sleep" << std::endl;
   }
 }
 
